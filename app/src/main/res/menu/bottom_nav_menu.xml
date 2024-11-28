@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+    <item
+        android:id="@+id/navigation_events"
+        android:icon="@drawable/eventon"
+        android:title="@string/events" />
+
+    <item
+        android:id="@+id/navigation_finish"
+        android:icon="@drawable/finish"
+        android:title="@string/finished" />
+
+    <item
+        android:id="@+id/navigation_favorite"
+        android:icon="@drawable/favorite"
+        android:title="@string/favorite" />
+
+    <item
+        android:id="@+id/navigation_settings"
+        android:icon="@drawable/setting"
+        android:title="@string/settings" />
+</menu>

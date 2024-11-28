@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+xmlns:app="http://schemas.android.com/apk/res-auto"
+xmlns:tools="http://schemas.android.com/tools"
+app:startDestination="@id/eventsFragment">
+
+<fragment
+    android:id="@+id/eventsFragment"
+    android:name="com.dicoding.finalsubmission1.EventsFragment"
+    tools:layout="@layout/fragment_events">
+<action
+    android:id="@+id/action_eventsFragment_to_eventDetailFragment"
+    app:destination="@id/eventDetailFragment" />
+    <action
+        android:id="@+id/action_eventsFragment_to_finishedFragment"
+        app:destination="@id/finishedFragment"
+        app:enterAnim="@anim/nav_default_enter_anim"
+        app:exitAnim="@anim/nav_default_exit_anim"
+        app:popEnterAnim="@anim/nav_default_pop_enter_anim"
+        app:popExitAnim="@anim/nav_default_pop_exit_anim" />
+    <action
+        android:id="@+id/action_eventsFragment_to_favoriteFragment"
+        app:destination="@id/favoriteFragment" />
+</fragment>
+
+<fragment
+android:id="@+id/eventDetailFragment"
+android:name="com.dicoding.finalsubmission1.EventDetailFragment"
+tools:layout="@layout/fragment_event_detail">
+<argument
+    android:name="eventId"
+    app:argType="integer" />
+</fragment>
+    <fragment
+        android:id="@+id/finishedFragment"
+        android:name="com.dicoding.finalsubmission1.FinishedFragment"
+        android:label="fragment_finished"
+        tools:layout="@layout/fragment_finished" >
+        <action
+            android:id="@+id/action_finishedFragment_to_eventDetailFragment"
+            app:destination="@id/eventDetailFragment" />
+        <action
+            android:id="@+id/action_finishedFragment_to_eventsFragment"
+            app:destination="@id/eventsFragment"
+            app:enterAnim="@anim/nav_default_enter_anim"
+            app:exitAnim="@anim/nav_default_exit_anim"
+            app:popEnterAnim="@anim/nav_default_pop_enter_anim"
+            app:popExitAnim="@anim/nav_default_pop_exit_anim" />
+    </fragment>
+    <fragment
+        android:id="@+id/favoriteFragment"
+        android:name="com.dicoding.finalsubmission1.FavoriteFragment"
+        android:label="FavoriteFragment" >
+        <action
+            android:id="@+id/action_favoriteFragment_to_eventDetailFragment"
+            app:destination="@id/eventDetailFragment" />
+        <action
+            android:id="@+id/action_favoriteFragment_to_eventsFragment"
+            app:destination="@id/eventsFragment" />
+        <action
+            android:id="@+id/action_favoriteFragment_to_finishedFragment"
+            app:destination="@id/finishedFragment" />
+    </fragment>
+
+</navigation>
+
